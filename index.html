@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mach-E</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="main">
+    <header>
+      <a href="#">
+        <img src="./assets/mustang-logo.png" class="logo" alt="Logo cavalo">
+      </a>
+      <ul class="navigation">
+        <li><a href="#">Exterior</a></li>
+        <li><a href="#">Interior</a></li>
+        <li><a href="#">Carregamento</a></li>
+        <li><a href="#">Tecnologia</a></li>
+        <li><a href="#">Modelos</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <h2>Dicas de Economia <span>Saneago</span></h2>
+      <a href="#" class="btn">Economize até 30%</a>
+      <img src="./assets/mach-e-vermelho.png" alt="Saneago Mustang Mach-E" class="mach">
+    </div>
+    <div class="slider">
+      <div class="slides active">
+        <h2>
+          <span>Economize na Conta de Água.</span>
+          <br>
+          30% Desconto
+        </h2>
+        <h2>
+          <span>Desconto Exclusivo</span>
+          <br>
+          Suporte ao Cliente
+        </h2>
+      </div>
+      <div class="slides">
+        <h2>
+          <span>0-100 km/h</span>
+          <br>
+          3.5s
+        </h2>
+        <h2>
+          <span>Autonomia Máxima</span>
+          <br>
+          600km
+        </h2>
+
+      </div>
+      <div class="slides ">
+        <h2>
+          <span>Carregamento 10-80%</span>
+          <br>
+          32.3min
+        </h2>
+        <h2>
+          <span>Capacidade Bateria</span>
+          <br>
+          72.6kwh
+        </h2>
+      </div>
+    </div>
+    <footer>
+      <ul class="sci">
+        <li>
+          <a href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </footer>
+  </section>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    const slides = document.querySelectorAll(".slides");
+    const dots = document.querySelectorAll(".dot");
+
+    function setActive(i) {
+      // Desativar todos os slides
+      for (const slide of slides) {
+        slide.classList.remove('active');
+      }
+      // Ativar o slide selecionado
+      slides[i].classList.add('active');
+
+      // Desativar todos os pontos
+      for (const dot of dots) {
+        dot.classList.remove('active');
+      }
+      // Ativar o ponto selecionado
+      dots[i].classList.add('active');
+    }
+    }
+
+    for (let j = 0; j < dots.length; j++) {
+      dots[j].addEventListener('click', () => {
+        console.log(j)
+        setActive(j);
+      })
+    }
+  </script>
+</body>
+
+</html>
